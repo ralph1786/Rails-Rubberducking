@@ -1,0 +1,17 @@
+<h2>Edit Duck</h2>
+
+<%flash.each do |message|%>
+    <p><%=message.full_messages%></p>
+<%end%>
+
+
+<%= form_for @duck do |f|%>
+    <%= f.label :name %>:
+    <%= f.text_field :name %><br />
+    <%= f.label :description %>:
+    <%= f.text_field :description %><br />
+    <%= f.label :type %>:
+    <%= f.text_field :type %><br />
+    <%= f.submit %>
+
+<%end%>

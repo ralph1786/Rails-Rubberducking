@@ -1,0 +1,13 @@
+<h2>Edit Student</h2>
+
+<%flash.each do |message|%>
+    <p><%=message.full_messages%></p>
+<%end%>
+
+
+<%= form_for @student do |f|%>
+    <%= f.label :name %>:
+    <%= f.text_field :name %><br />
+    <%= f.submit %>
+
+<%end%>
